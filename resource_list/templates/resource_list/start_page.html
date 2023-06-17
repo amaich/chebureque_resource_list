@@ -1,0 +1,10 @@
+{% extends "resource_list/base.html" %}
+
+{% block content %}
+    {% for resource in resources %}
+    <div>
+        <p><a href="{{ resource.url }}">{{ resource.name }}</a></p>
+        <p>{{ resource.description }}</p>
+    </div>
+    {% endfor %}
+{% endblock content %}

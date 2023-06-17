@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=10">
+    <title>Chebureque</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'resource_list/styles.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+</head>
+<body>
+    <div>
+        <header class="header">
+            <p><a href="{% url 'resource_list:main_page' %}">Chebureque Resorce List</a></p>
+        </header>
+        <div>
+            <main class="content">
+                {% block content %}
+                <p>Hello, Stranger!</p>
+                {% endblock %}
+            </main>
+        </div>
+
+        <footer class="footer">
+            <p><a href="{% url 'resource_list:main_page' %}">Chebureque Resorce List</a></p>
+        </footer>
+    </div>  
+</body>
+</html>
